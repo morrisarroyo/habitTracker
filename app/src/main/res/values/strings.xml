@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">HabitTracker</string>
+    <string name="action_settings">Settings</string>
+    <string name="string_dateColumnSample">sam\nsam 33</string>
+    <string name="string_habitTracker">Habit Tracker</string>
+    <string name="string_habit_sample">habit sample</string>
+    <string name="string_habitName">Habit Name</string>
+    <string name="string_cancel">Cancel</string>
+    <string name="string_ok">OK</string>
+    <string name="string_done">Done</string>
+    <string name="string_timeNotification">Time Notification</string>
+    <string name="string_locationNotification">Location Notification</string>
+    <!--<string name="string_enableNotification">Enable Notification</string>-->
+    <string name="string_habitNotification">Habit Notification</string>
+    <!--<string name="string_defaultLatLong">Lat: 0 Long: 0</string>
+    <string name="string_defaultTime" >8:00</string>-->
+    <string name="string_latitude">Latitude</string>
+    <string name="string_longitude">Longitude</string>
+    <string name="string_total">Total</string>
+    <string name="string_longest_streak">Longest Streak</string>
+    <string name="string_currentStreak">Current Streak</string>
+    <string name="string_startDate">Start Date</string>
+    <string name="string_today">Today</string>
+    <string name="string_yesterday">Yesterday</string>
+    <string name="string_2DaysAgo">2 days ago</string>
+    <string name="string_3DaysAgo">3 days ago</string>
+    <string name="string_4DaysAgo">4 days ago</string>
+    <string name="string_backgroundImage">Background Image</string>
+    <string name="string_locationImageButton">Location Image Button</string>
+    <string name="string_timeImageButton">Time Image Button</string>
+
+</resources>

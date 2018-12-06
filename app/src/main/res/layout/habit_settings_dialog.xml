@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/fragment_habitSettings">
+
+    <ImageView
+        android:id="@+id/imageView_habitSettingsDialogNameBackground"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@color/colorPrimary"
+        android:contentDescription="@string/string_backgroundImage"/>
+
+    <TextView
+        android:id="@+id/textView_habitSettingsDialogName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/string_habitNotification"
+        android:text="@string/string_habitNotification"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView_habitSettingsDialogNameBackground"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_habitSettingsDialogNameBackground"
+        app:layout_constraintStart_toStartOf="@+id/imageView_habitSettingsDialogNameBackground"
+        app:layout_constraintTop_toTopOf="@+id/imageView_habitSettingsDialogNameBackground"
+        tools:text="@string/string_habitNotification" />
+    <!--
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/string_enableNotification"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_habitSettingsDialogNameBackground" />
+        -->
+
+    <Switch
+        android:id="@+id/switch_locationNotification"
+        android:layout_width="0dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/string_locationNotification"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_habitSettingsDialogName" />
+
+    <ImageButton
+        android:id="@+id/imageButton_locationPicker"
+        android:layout_width="47dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/switch_locationNotification"
+        app:layout_constraintTop_toBottomOf="@+id/switch_locationNotification"
+        app:srcCompat="@drawable/ic_map_pin"
+        android:contentDescription="@string/string_locationImageButton"/>
+
+    <Switch
+        android:id="@+id/switch_timeNotification"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/string_timeNotification"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/switch_locationNotification"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton_locationPicker" />
+
+
+    <ImageButton
+        android:id="@+id/imageButton_timePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/switch_timeNotification"
+        app:layout_constraintTop_toBottomOf="@+id/switch_timeNotification"
+        app:srcCompat="@drawable/ic_clock"
+        android:contentDescription="@string/string_timeImageButton"/>
+
+    <EditText
+        android:id="@+id/editText_time"
+        android:layout_width="@android:dimen/thumbnail_width"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="@string/string_timeNotification"
+        android:inputType="none|time"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton_timePicker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButton_timePicker"
+        app:layout_constraintTop_toTopOf="@+id/imageButton_timePicker"
+        android:importantForAutofill="no"
+        tools:targetApi="o" />
+
+    <EditText
+        android:id="@+id/editText_latitude"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="@string/string_latitude"
+        android:inputType="numberDecimal"
+        android:maxLength="6"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton_locationPicker"
+        app:layout_constraintEnd_toStartOf="@+id/editText_longitude"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageButton_locationPicker"
+        app:layout_constraintTop_toTopOf="@+id/imageButton_locationPicker"
+        app:layout_constraintVertical_bias="1.0"
+        android:importantForAutofill="no"
+        tools:targetApi="o" />
+
+    <EditText
+        android:id="@+id/editText_longitude"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="@string/string_longitude"
+        android:inputType="numberDecimal"
+        android:maxLength="6"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton_locationPicker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/editText_latitude"
+        app:layout_constraintTop_toTopOf="@+id/imageButton_locationPicker"
+        app:layout_constraintVertical_bias="0.714"
+        android:importantForAutofill="no"
+        tools:targetApi="o" />
+
+</android.support.constraint.ConstraintLayout>
