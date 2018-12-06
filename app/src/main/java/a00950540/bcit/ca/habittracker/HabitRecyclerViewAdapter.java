@@ -58,6 +58,14 @@ public class HabitRecyclerViewAdapter extends RecyclerView.Adapter<HabitRecycler
 
         for (int i = 0; i < holder.days.length; ++i) {
             final int j = i;
+            /*
+            char dayValue = habitTracking.charAt(j);
+            if (dayValue == '0') {
+                holder.days[j].setContentDescription("Yes");
+            } else {
+                holder.days[j].setContentDescription("No");
+            }
+            */
             holder.days[j].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -65,8 +73,10 @@ public class HabitRecyclerViewAdapter extends RecyclerView.Adapter<HabitRecycler
 
                     char dayValue = habitTracking.charAt(j);
                     if (dayValue == '0') {
+                        //holder.days[j].setContentDescription("Yes");
                         habit.setHabitTracking(replace(habitTracking, j, '1'));
                     } else {
+                        //holder.days[j].setContentDescription("No");
                         habit.setHabitTracking(replace(habitTracking, j, '0'));
                     }
                     MainActivity.db.habitDao().updateHabitTracking(habit.getHabitId(), habit.getHabitTracking());

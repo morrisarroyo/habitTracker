@@ -3,13 +3,15 @@ package a00950540.bcit.ca.habittracker.database;
 import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.Ignore;
+import android.arch.persistence.room.Index;
 import android.arch.persistence.room.PrimaryKey;
 import android.icu.util.Calendar;
 
 import java.sql.Time;
 import java.util.Date;
 
-@Entity
+@Entity(indices = {@Index(value = {"habit_name"},
+        unique = true)})
 public class Habit {
     @Ignore
     public static final String NEW_HABIT_TRACKING = "00000";
